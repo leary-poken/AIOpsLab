@@ -85,4 +85,4 @@ See [Customizing the Chart Before Installing](https://helm.sh/docs/intro/using_h
 
 ```console
 helm show values prometheus-community/prometheus-pushgateway
-```
+```
