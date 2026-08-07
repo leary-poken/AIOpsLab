@@ -18,4 +18,4 @@
   export POD_NAME=$(kubectl get pods --namespace {{ include "alertmanager.namespace" . }} -l "app.kubernetes.io/name={{ include "alertmanager.name" . }},app.kubernetes.io/instance={{ .Release.Name }}" -o jsonpath="{.items[0].metadata.name}")
   echo "Visit http://127.0.0.1:{{ .Values.service.port }} to use your application"
   kubectl --namespace {{ include "alertmanager.namespace" . }} port-forward $POD_NAME {{ .Values.service.port }}:80
-{{- end }}
+{{- end }}
